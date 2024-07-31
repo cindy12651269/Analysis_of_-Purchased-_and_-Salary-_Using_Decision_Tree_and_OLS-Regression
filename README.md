@@ -1,9 +1,50 @@
-# Analysis_of_-Purchased-_and_-Salary-_Using_Decision_Tree_and_OLS-Regression
+# Analysis of 'Purchased' and 'Salary' Using Decision Tree and OLS Regression
+
 This project demonstrates two types of analysis on a dataset: classification and regression. The dataset is sourced from an online repository and contains information about individuals, including their country, age, salary, and whether they made a purchase. The analyses performed are:
 
-1. Classification of 'Purchased': Predicting whether an individual made a purchase based on their country, age, and salary using a decision tree classifier.
+1. **Classification of 'Purchased'**: Predicting whether an individual made a purchase based on their country, age, and salary using a decision tree classifier.
+2. **Regression of 'Salary'**: Predicting an individual's salary based on their country, age, and purchase status using an ordinary least squares (OLS) regression model.
 
-2. Regression of 'Salary': Predicting an individual's salary based on their country, age, and purchase status using an ordinary least squares (OLS) regression model.
+## Dataset
+
+The dataset used in this project is located at: [Data.csv](https://raw.githubusercontent.com/MachineLearningLiuMing/scikit-learn-primer-guide/master/Data.csv)
+
+## Prerequisites
+
+To run the code, you need the following Python libraries installed:
+
+- `pandas`
+- `scikit-learn`
+- `statsmodels`
+- `numpy`
+
+You can install them using pip:
+
+```bash
+pip install pandas scikit-learn statsmodels numpy
+```
+
+## Code Description
+
+### Data Preprocessing
+
+- **Load the dataset**: The dataset is loaded from the provided URL.
+- **Handle missing values**: Missing values in the 'Salary' and 'Age' columns are filled with the mean values for each country.
+- **Label encoding**: The categorical features 'Purchased' and 'Country' are converted to numerical values using label encoding.
+
+### Analysis 1: Classification of 'Purchased'
+
+- **Split the data**: The data is split into a training set (first 7 rows) and a testing set (last 3 rows).
+- **Train a Decision Tree Classifier**: The classifier is trained on the training set to predict the 'Purchased' label.
+- **Predict on the test set**: The classifier predicts the 'Purchased' labels for the test set.
+- **Evaluate the model**: The accuracy of the classifier is calculated and printed.
+
+### Analysis 2: Regression of 'Salary'
+
+- **Split the data**: The data is split into a training set (first 7 rows) and a testing set (last 3 rows).
+- **Train an OLS Regression Model**: The model is trained on the training set to predict the 'Salary'.
+- **Predict on the test set**: The regression model predicts the 'Salary' values for the test set.
+- **Evaluate the model**: The mean squared error (MSE), root mean squared error (RMSE), and mean absolute error (MAE) of the regression model are calculated and printed.
 
 ## Sample Code
 ```python
@@ -76,4 +117,4 @@ print("Mean Squared Error (MSE):", mse)
 print("Root Mean Squared Error (RMSE):", rmse)
 print("Mean Absolute Error (MAE):", mae)
 
-```python
+
